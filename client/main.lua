@@ -14,7 +14,9 @@ local PREVENT_SHUFFLE = 184               -- CPED_CONFIG_FLAG_PreventAutoShuffle
 local SHUFFLE_TIMEOUT_MS = 5000           -- give up waiting for a shuffle to finish after this long
 local SPEED_FACTOR = { mph = 2.236936, kmh = 3.6 }
 
-local strings = Locales[Config.Locale] or Locales.en
+-- 'auto' follows ox_lib's language (the ox:locale convar), and English when that isn't set.
+local locale = Config.Locale == 'auto' and GetConvar('ox:locale', 'en') or Config.Locale
+local strings = Locales[locale] or Locales.en
 local shuffling = false
 
 local function notify(key, kind)
