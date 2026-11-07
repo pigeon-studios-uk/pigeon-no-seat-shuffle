@@ -5,7 +5,7 @@ lua54 'yes'
 name 'pigeon-no-seat-shuffle'
 author 'Pigeon Studios'
 description 'Stops passengers sliding into the driver\'s seat by themselves, with a key and /seat to change seats on purpose.'
-version '1.0.0'
+version '1.1.0'
 repository 'https://github.com/pigeon-studios-uk/pigeon-no-seat-shuffle'
 
 -- Pigeon Studios version registry entry, read by server/version_check.lua.
